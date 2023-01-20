@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UserResult } from '../interfaces/user';
+import { User, UserResult } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class UsersService {
   }
 
   getUsers() {
-    return this.http.get<User[]>("https://reqres.in/api/users?page=1");
+    return this.http.get<UserResult>("https://reqres.in/api/users?page=1");
   } 
  
 
