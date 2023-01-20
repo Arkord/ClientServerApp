@@ -7,6 +7,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
+import { PagetopComponent } from './shared/pagetop/pagetop.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +19,20 @@ import { AppRoutingModule } from './app-routing.module';
     AboutComponent,
     HomeComponent,
     ContactComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    FooterComponent,
+    HeaderComponent,
+    LoginComponent,
+    PagetopComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
